@@ -92,7 +92,8 @@ body {
     color: #aaa;
     line-height: 1.6;
 }
-/* --- SEÇÃO explorar --- */
+
+/* --- SOBRE --- */
 .subtitulo {
     position: relative;
     overflow: hidden;
@@ -104,6 +105,7 @@ body {
     background: linear-gradient(to bottom, #e5e3e3, #878282);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    align-items: center;
     white-space: nowrap;
     display: block;
 }
@@ -117,11 +119,47 @@ body {
     max-width: 600px;
     padding-left: 60px;
 }
-
-.explorar-section {
+/* --- ACERVOS --- */
+.subtitulo2 h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-left: 60px;
+    background: linear-gradient(to bottom, #ffffff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Frase "Mais de 10.000 vinis..." */
+span.subtitulo2 {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    -webkit-text-fill-color: initial; /* Remove o transparente do gradiente aqui */
+    background: none;
+}.explorar-section {
     padding: 100px 20px;
 }
+.titulo2 {
+    color: #b3b3b3;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-left: 60px;
+}
 
+/* --- EXPLORAR E CONTATOS --- */
+.explorar-contato {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-left: 100px; /* remova se quiser centralizar de verdade */
+    background: linear-gradient(to bottom, #ffffff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
 .explorar-container {
     max-width: 1100px;
     margin: 60px auto 0;
@@ -242,22 +280,27 @@ body {
     margin-bottom: 40px;
 }
 
+/*categoria pop,rock...*/
 .categoria h3 {
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
+    margin-left: 60px; /* Alinha com o título principal */
+    margin-top: 50px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
+/*imagens acervos*/
 .scroll-row {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     overflow-x: auto;
-    padding-bottom: 10px;
+    padding: 20px 60px 50px 60px;
+    scrollbar-width: none;
 }
-
 .scroll-row img {
-    width: 120px;
-    height: 120px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
     object-fit: cover;
     flex-shrink: 0;
