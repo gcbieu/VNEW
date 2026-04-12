@@ -6,19 +6,16 @@
     --accent-red: #ef4444;
     --text-muted: #888;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Inter', sans-serif;
     background-color: #050505;
     color: white;
 }
-
 /*Tipografia Logo */
 .logo-vnew {
     background: linear-gradient(180deg, #FFFFFF 30%, #444444 100%);
@@ -26,58 +23,6 @@ body {
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
 }
-
-/* Display Multimédia Responsivo */
-.multimedia-display {
-    border-radius: 40px;
-    padding: 3rem 2.5rem;
-    background: linear-gradient(145deg, rgba(20, 20, 20, 0.6), rgba(5, 5, 5, 0.8));
-    backdrop-filter: blur(20px);
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow:
-        inset 0 0 50px rgba(0, 0, 0, 0.9),
-        0 30px 60px rgba(0, 0, 0, 0.5);
-}
-
-/* Equalizador Colorido */
-.eq-container {
-    display: flex;
-    align-items: flex-end;
-    gap: 4px;
-    flex: 1;
-    margin-right: 2rem;
-}
-
-.eq-bar {
-    flex: 1;
-    will-change: height;
-    max-width: 6px;
-    background: linear-gradient(to top,
-            var(--accent-green) 0%,
-            var(--accent-green) 60%,
-            var(--accent-yellow) 80%,
-            var(--accent-red) 100%);
-    border-radius: 4px;
-    transition: height 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
-}
-
-/* Knob Ticks */
-.tick {
-    position: absolute;
-    width: 2px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    left: 50%;
-    top: 50%;
-    transform-origin: 0 45px;
-}
-
 /* Navegação */
 .nav-link {
     font-size: 0.6rem;
@@ -97,84 +42,24 @@ body {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Social Cards (Bento Style) */
-.social-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
-}
-
-.social-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-5px);
-}
-
-.social-card .label {
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    opacity: 0.3;
-}
-
-.social-card i {
-    opacity: 0.7;
-}
-
-.social-card:hover i {
-    opacity: 1;
-}
-
-/* Glow
-Effect */
-.shadow-glow {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-}
-
-@media (max-width: 768px) {
-    .multimedia-display {
-        flex-direction: column;
-        gap: 3rem;
-        padding: 4rem 2rem 3rem;
-    }
-
-    .eq-container {
-        margin-right: 0;
-        width: 100%;
-        height: 120px !important;
-    }
-}
-
-/*final da primeira pagina*/
+/*Rede social*/
 .social-icon {
     font-size: 1.5rem;
     transition: all 0.3s ease;
     /* Transição suave para todas as propriedades */
     text-decoration: none;
 }
-
 .github {
     color: white;
 }
-
 .linkedin {
     color: #0A66C2;
 }
-
 .social-icon:hover {
     transform: translateY(-5px) scale(1.1);
     /* Sobe 5px e aumenta um pouquinho */
     filter: brightness(1.2);
 }
-
 .social-icon:active {
     transform: scale(0.9);
 }
@@ -206,6 +91,7 @@ Effect */
     padding-left: 0px;
     margin: 0 auto;
 }
+
 /* --- SEÇÃO explorar --- */
 .about-section {
     background-color: #000000;
@@ -366,176 +252,10 @@ Effect */
 }
 
 /*explorar*/
-/* Container Principal de Acervos */
-.acervos-container {
-    display: flex;
-    gap: 40px;
-    padding: 60px;
-    align-items: flex-start;
-}
-
-/* Sidebar Estilizada */
-.sidebar-filtros {
-    width: 280px;
-    flex-shrink: 0;
-}
-
-.filtros-content {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 2rem;
-    padding: 30px;
-}
-
-.filtro-grupo {
-    margin-bottom: 30px;
-}
-
-.filtro-label {
-    display: block;
-    text-transform: uppercase;
-    font-size: 10px;
-    color: #666;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-/* Checkboxes e Textos */
-.lista-checkbox {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.lista-checkbox label {
-    font-size: 0.85rem;
-    color: #aaa;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-/* Cores e Swatches */
-.lista-cores {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.cor-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.85rem;
-    opacity: 0.6;
-}
-
-.cor-item.active {
-    opacity: 1;
-    border-left: 2px solid white;
-    padding-left: 10px;
-}
-
-.swatch {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-}
-
-.splatter {
-    background: linear-gradient(to tr, #22d3ee, #f472b6, #fbbf24);
-}
-
-.marble {
-    background: #0d9488;
-}
-
-.black {
-    background: #18181b;
-    border: 1px solid #333;
-}
-
-/* Tags de Década */
-.tags-decada {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.tags-decada span {
-    font-size: 0.75rem;
-    padding: 6px 15px;
-    border-radius: 20px;
-    border: 1px solid #333;
-    color: #555;
-    cursor: pointer;
-}
-
-.tags-decada span.active {
-    border-color: white;
-    color: white;
-}
-
-/* Vitrine Branca (O contraste que você queria) */
-.vitrine-produtos {
-    background: #f5f5f5;
-    /* Branco levemente acinzentado (estilo papel) */
-    border-radius: 2rem;
-    /* Bordas arredondadas do Figma */
-    width: 100%;
-    /* Ele vai ocupar o espaço que sobrar ao lado da sidebar */
-    max-width: 900px;
-    /* Limita para não virar um "paredão" */
-    height: auto;
-    min-height: 250px;
-    /*altura*/
-    color: black;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    /* Sombra para destacar do fundo preto */
-    display: flex;
-    flex-direction: column;
-}
-
-.vitrine-header {
-    padding: 5px 40px;
-    border-bottom: 1px solid #eee;
-}
-
-.vitrine-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 2rem;
-    margin: 0;
-}
-
-.grid-produtos {
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 30px;
-}
-
-@media (max-width: 768px) {
-    .acervos-container {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .sidebar-filtros {
-        width: 100%;
-    }
-
-    .vitrine-produtos {
-        max-width: 100%;
-    }
-}
 
 /* Container do Formulário */
 #contatos {
     position: relative;
-    /* Isso cria a "gaiola" para a vitrola */
     overflow: hidden;
     /* Evita que a imagem crie barras de rolagem */
     width: 100%;
@@ -624,37 +344,6 @@ Effect */
 
 .btn-enviar:active {
     transform: scale(0.95);
-}
-
-.final {
-    position: absolute;
-    /* Ela flutua... */
-    bottom: 230px;
-    /* ...perto do fundo da seção de contatos */
-    left: 850px;
-    width: 800px;
-    opacity: 0.2;
-    z-index: 1;
-    /* Atrás do formulário */
-    pointer-events: none;
-    display: none;
-}
-
-@media (min-width: 1024px) {
-    .final {
-        display: block;
-        position: absolute;
-        right: 20px;
-        bottom: 100px;
-        width: 400px;
-        opacity: 0.2;
-    }
-}
-
-.final img {
-    width: 100%;
-    filter: grayscale(100%);
-    /* Opcional: deixa ela PB para combinar com o clima retrô */
 }
 
 /* --- rodape --- */
