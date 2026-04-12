@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-[#050505] text-white overflow-x-hidden antialiased selection:bg-white selection:text-black">
 
     <nav class="fixed top-6 right-6 z-[100] md:right-12 flex gap-3" aria-label="Navegação principal">
@@ -21,39 +23,52 @@
     </nav>
 
     <main id="home">
-        <section class="relative flex min-h-screen flex-col items-center justify-center p-6 transition-opacity duration-700">
+        <section
+            class="relative flex min-h-screen flex-col items-center justify-center p-6 transition-opacity duration-700">
             <div class="w-full max-w-5xl flex flex-col items-center gap-10">
-                
+
                 <header class="text-center space-y-4">
                     <div class="brand-header flex flex-col items-center">
-                        <span class="collection-tag block tracking-[0.5em] opacity-40 text-[10px] md:text-xs">GCO COLLECTION</span>
-                        <h1 class="logo-vnew text-6xl md:text-8xl lg:text-9xl uppercase font-black leading-none tracking-tighter">VNEW</h1>
+                        <span class="collection-tag block tracking-[0.5em] opacity-40 text-[10px] md:text-xs">GCO
+                            COLLECTION</span>
+                        <h1
+                            class="logo-vnew text-6xl md:text-8xl lg:text-9xl uppercase font-black leading-none tracking-tighter">
+                            VNEW</h1>
                         <div class="flex items-center gap-4 opacity-40 mt-2" role="presentation">
                             <div class="h-[1px] w-8 bg-white"></div>
-                            <p class="text-[0.6rem] md:text-xs tracking-[0.4em] font-mono uppercase">O retrô mais New</p>
+                            <p class="text-[0.6rem] md:text-xs tracking-[0.4em] font-mono uppercase">O retrô mais New
+                            </p>
                             <div class="h-[1px] w-8 bg-white"></div>
                         </div>
                     </div>
                 </header>
 
-                <article class="multimedia-display group relative border border-white/5 hover:border-white/10 transition-all duration-500" id="display" role="region" aria-label="Painel de controle de áudio">
-                    <span class="absolute left-8 top-6 text-[9px] tracking-[0.3em] opacity-30 font-mono select-none" aria-hidden="true">MODEL: GCO-8399</span>
-                    
+                <article
+                    class="multimedia-display group relative border border-white/5 hover:border-white/10 transition-all duration-500"
+                    id="display" role="region" aria-label="Painel de controle de áudio">
+                    <span class="absolute left-8 top-6 text-[9px] tracking-[0.3em] opacity-30 font-mono select-none"
+                        aria-hidden="true">MODEL: GCO-8399</span>
+
                     <div class="eq-container h-24 md:h-32" id="equalizer" aria-hidden="true">
-                        </div>
+                    </div>
 
                     <div class="relative flex items-center justify-center scale-90 md:scale-100">
-                        <div id="ticks" class="absolute inset-[-20px] opacity-20 group-hover:opacity-50 transition-opacity" aria-hidden="true"></div>
-                        <button id="knob" 
-                                class="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#050505] border border-white/10 shadow-[0_0_30px_rgba(0,0,0,1)] cursor-pointer active:scale-95 transition-transform"
-                                aria-label="Ajustar volume analógico">
-                            <div class="absolute top-3 left-1/2 -translate-x-1/2 w-1.5 h-3 bg-white/50 rounded-full shadow-glow"></div>
+                        <div id="ticks"
+                            class="absolute inset-[-20px] opacity-20 group-hover:opacity-50 transition-opacity"
+                            aria-hidden="true"></div>
+                        <button id="knob"
+                            class="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#050505] border border-white/10 shadow-[0_0_30px_rgba(0,0,0,1)] cursor-pointer active:scale-95 transition-transform"
+                            aria-label="Ajustar volume analógico">
+                            <div
+                                class="absolute top-3 left-1/2 -translate-x-1/2 w-1.5 h-3 bg-white/50 rounded-full shadow-glow">
+                            </div>
                         </button>
                     </div>
 
                     <div class="absolute right-8 bottom-6 hidden md:flex items-center gap-3">
                         <span class="text-[8px] tracking-widest opacity-20 font-mono">ST-BY</span>
-                        <div class="w-2 h-2 bg-green-500/60 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.4)]" role="status" aria-label="Sistema Ligado"></div>
+                        <div class="w-2 h-2 bg-green-500/60 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.4)]"
+                            role="status" aria-label="Sistema Ligado"></div>
                     </div>
                 </article>
             </div>
@@ -93,7 +108,7 @@
                     </nav>
                 </div>
 
-                <div class="w-1/2 pr-20">
+                <div class="w-full md:w-1/2 px-6 md:pr-20">
                     <div id="panel-retro" class="info-card active">
                         <p class="playfair-text">
                             Escolha a sua sonoridade entre clássicos analógicos e uma curadoria que imprime nostalgia e
@@ -123,82 +138,84 @@
                         </p>
                     </div>
                 </div>
-                
-                    <div class="final">
-                        <img src="imagens/vitrola.png" alt="Contato VNEW">
-                    </div>
+
+                <div class="final">
+                    <img src="imagens/vitrola.png" alt="Contato VNEW">
+                </div>
 
             </section>
 
             <!-- --- ACERVOS --- -->
-<section id="acervos">
-    <div class="sobrenos">
-        <h1>ACERVOS</h1>
-        <span class="subtitulo">Mais de 10.000 vinis em nossa coleção</span>
-    </div>
-
-    <div class="h2">
-        Explore nossos acervos exclusivos, onde cada peça é uma viagem no tempo. De vinis clássicos a edições limitadas, nossa coleção é cuidadosamente selecionada para oferecer o melhor do universo retrô.
-    </div>
-
-    <div class="acervos-container">
-        <aside class="sidebar-filtros">
-            <div class="filtros-content">
-                <div class="filtro-grupo">
-                    <label class="filtro-label">Gênero</label>
-                    <div class="lista-checkbox">
-                        <label><input type="checkbox"> Pop</label>
-                        <label><input type="checkbox"> Rock</label>
-                        <label><input type="checkbox"> Indie Rock</label>
-                        <label><input type="checkbox"> Classic Rock</label>
-                        <label><input type="checkbox"> Nacional</label>
-                    </div>
+            <section id="acervos">
+                <div class="acervos-header">
+                    <h1>ACERVOS</h1>
+                    <span class="subtitulo">Mais de 10.000 vinis em nossa coleção</span>
                 </div>
 
-                <div class="filtro-grupo">
-                    <label class="filtro-label">Cor do Vinil</label>
-                    <div class="lista-cores">
-                        <div class="cor-item"><span class="swatch splatter"></span> Splatter (Multi)</div>
-                        <div class="cor-item"><span class="swatch marble"></span> Marble (Teal)</div>
-                        <div class="cor-item active"><span class="swatch black"></span> Classic Black</div>
-                    </div>
+                <div class="h3">
+                    Explore nossos acervos exclusivos, onde cada peça é uma viagem no tempo. De vinis clássicos a
+                    edições limitadas, nossa coleção é cuidadosamente selecionada para oferecer o melhor do universo
+                    retrô.
                 </div>
 
-                <div class="filtro-grupo">
-                    <label class="filtro-label">Década</label>
-                    <div class="tags-decada">
-                        <span>'60s</span>
-                        <span>'70s</span>
-                        <span>'80s</span>
-                        <span class="active">'90s</span>
-                    </div>
-                </div>
+                <div class="acervos-container">
+                    <aside class="sidebar-filtros">
+                        <div class="filtros-content">
+                            <div class="filtro-grupo">
+                                <label class="filtro-label">Gênero</label>
+                                <div class="lista-checkbox">
+                                    <label><input type="checkbox"> Pop</label>
+                                    <label><input type="checkbox"> Rock</label>
+                                    <label><input type="checkbox"> Indie Rock</label>
+                                    <label><input type="checkbox"> Classic Rock</label>
+                                    <label><input type="checkbox"> Nacional</label>
+                                </div>
+                            </div>
 
-                <div class="filtro-grupo">
-                    <label class="filtro-label">Faixa de Preço</label>
-                    <input type="range" class="price-slider">
-                    <div class="price-labels">
-                        <span>$0</span>
-                        <span>$100,000</span>
-                    </div>
-                </div>
-            </div>
-        </aside>
+                            <div class="filtro-grupo">
+                                <label class="filtro-label">Cor do Vinil</label>
+                                <div class="lista-cores">
+                                    <div class="cor-item"><span class="swatch splatter"></span> Splatter (Multi)</div>
+                                    <div class="cor-item"><span class="swatch marble"></span> Marble (Teal)</div>
+                                    <div class="cor-item active"><span class="swatch black"></span> Classic Black</div>
+                                </div>
+                            </div>
 
-        <main class="vitrine-produtos">
-            <header class="vitrine-header">
-                <h2>VNEW RETRO</h2>
-            </header>
-            <div class="grid-produtos">
+                            <div class="filtro-grupo">
+                                <label class="filtro-label">Década</label>
+                                <div class="tags-decada">
+                                    <span>'60s</span>
+                                    <span>'70s</span>
+                                    <span>'80s</span>
+                                    <span class="active">'90s</span>
+                                </div>
+                            </div>
+
+                            <div class="filtro-grupo">
+                                <label class="filtro-label">Faixa de Preço</label>
+                                <input type="range" class="price-slider">
+                                <div class="price-labels">
+                                    <span>$0</span>
+                                    <span>$100,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <main class="vitrine-produtos">
+                        <header class="vitrine-header">
+                            <h2>VNEW RETRO</h2>
+                        </header>
+                        <div class="grid-produtos">
+                        </div>
+                    </main>
                 </div>
-        </main>
-    </div>
-</section>
+            </section>
             <!-- --- CONTATOS --- -->
             <section id="contatos">
                 <div class="sobrenos">
                     <br><br>
-                <h2 class="sobre">contato</h2>
+                    <h2 class="sobre">contato</h2>
                 </div>
                 <form class="contact-form">
                     <div class="input-group">
@@ -221,7 +238,7 @@
                     </button>
                 </form>
 
-        </section>
+            </section>
     </main>
 
     <!-- Footer -->
@@ -233,7 +250,7 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
 
 <!-- Final da primeira página -->
-
