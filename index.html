@@ -1,308 +1,247 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VNew - O retrô mais New. Marketplace premium de discos de vinil.">
     <link rel="shortcut icon" href="imagens/vinyl.png" type="image/x-icon">
-    <title>VNEW</title>
+    <title>VNEW | O retrô mais New</title>
+    <!-- Bibliotecas Externas -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-[#050505] text-white overflow-x-hidden antialiased selection:bg-white selection:text-black">
 
-<body>
+    <!-- Navegação Fixa -->
+    <nav class="fixed top-6 right-6 z-[100] md:right-12 flex gap-3" aria-label="Navegação principal">
+        <a href="#home" class="nav-link">HOME</a>
+        <a href="#sobre" class="nav-link">SOBRE</a>
+        <a href="#explorar" class="nav-link">EXPLORAR</a>
+        <a href="#contatos" class="nav-link">CONTATO</a>
+    </nav>
 
-    <header class="hero-container">
-        <!-- SVG Turntable Placeholder (Drawing effect) -->
-        <svg class="turntable-draw" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="150" width="380" height="140" stroke="white" stroke-width="0.5" />
-            <circle cx="150" cy="220" r="120" stroke="white" stroke-width="0.5" stroke-dasharray="2 2" />
-            <circle cx="150" cy="220" r="5" fill="white" />
-            <path d="M300 160 L320 250 L350 245" stroke="white" stroke-width="1" />
-        </svg>
-
-        <!-- SVG Vinyl Stack Placeholder -->
-        <svg class="vinyl-stack" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 380 Q 150 350 250 380" stroke="white" stroke-width="0.5" />
-            <rect x="60" y="200" width="200" height="180" stroke="white" stroke-width="0.5" />
-            <path d="M260 210 L290 220 L290 390 L260 380 Z" stroke="white" stroke-width="0.5" />
-        </svg>
-
-        <div class="header-top">
-            <div>
-                <div class="retr-text">O RETRÔ MAIS NEW</div>
-                <div class="flex gap-2">
-                    <div class="w-12 h-1 bg-white mb-1"></div>
-                    <div class="w-12 h-1 border border-white rounded-full"></div>
-                </div>
-                <div class="mt-2 opacity-50 text-xs">
-                    ||||||||||||||||||||||||<br>
-                    ||||||||||||||||||||||||
-                </div>
-            </div>
-
-            <div class="text-center flex flex-col items-center justify-center h-full">
-                <h1 class="logo-vnew">VNEW</h1>
-                <span class="collection-tag">Collection</span>
-
-                <div class="mt-8 flex flex-col items-center gap-4">
-                    <span class="text-[0.6rem] opacity-70">GCO</span>
-                    <div class="multimedia-display" id="display">
-                        <div class="absolute left-4 top-4 text-[0.6rem] opacity-50">GCO-8399</div>
-                        <!-- Equalizador Visual -->
-                        <div class="eq-container" id="equalizer">
-                            <!-- Bars added by JS -->
-                        </div>
-                        <div class="absolute right-4 bottom-4 flex gap-2">
-                            <div class="w-10 h-10 rounded-full border border-white opacity-20"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="flex justify-center gap-4 mt-2">
-                        <button class="control-btn" aria-label="Voltar Faixa"><i class="fas fa-backward"></i></button>
-                        <button class="control-btn" aria-label="Play"><i class="fas fa-play"></i></button>
-                        <button class="control-btn" aria-label="Avançar Faixa"><i class="fas fa-forward"></i></button>
+    <!-- Hero Section -->
+    <main id="home" class="relative flex min-h-screen flex-col items-center justify-center p-6 transition-opacity duration-700">
+        <section class="w-full max-w-5xl flex flex-col items-center gap-10">
+            
+            <!-- Branding -->
+            <header class="text-center space-y-4">
+                <div class="brand-header flex flex-col items-center">
+                    <span class="collection-tag block tracking-[0.5em] opacity-40 text-[10px] md:text-xs">GCO COLLECTION</span>
+                    <h1 class="logo-vnew text-6xl md:text-8xl lg:text-9xl uppercase font-black leading-none tracking-tighter">VNEW</h1>
+                    <div class="flex items-center gap-4 opacity-40 mt-2">
+                        <div class="h-[1px] w-8 bg-white"></div>
+                        <p class="text-[0.6rem] md:text-xs tracking-[0.4em] font-mono uppercase">O retrô mais New</p>
+                        <div class="h-[1px] w-8 bg-white"></div>
                     </div>
                 </div>
-            </div>
+            </header>
 
-            <div class="flex flex-col gap-2">
-                <a href="#explorar" class="nav-link">
-                    <span>EXPLORAR</span>
-                    <i class="fas fa-home"></i>
-                </a>
-                <a href="#acervos" class="nav-link">
-                    <span>ACERVOS</span>
-                    <i class="fas fa-cog"></i>
-                </a>
-                <a href="#contatos" class="nav-link">
-                    <span>CONTATOS</span>
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-            </div>
-        </div>
-        </div>
-
-        <div class="flex-grow flex justify-between items-center px-10 relative z-10">
-            <div class="flex flex-col">
-                <div class="phone-mic-jacks">
-                    <div class="flex flex-col items-center gap-2">
-                        <span class="text-[0.6rem]">PHONE</span>
-                        <div class="jack">
-                            <div class="jack-inner"></div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <span class="text-[0.6rem]">MIC</span>
-                        <div class="jack">
-                            <div class="jack-inner"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Botão de Catálogo (Volume Knob) -->
-            <div class="knob-container">
-                <span class="text-[0.7rem] tracking-[0.2em] mb-2">CATÁLOGO</span>
-                <div class="flex items-center gap-6">
-                    <i class="fas fa-arrow-left opacity-50 cursor-pointer hover:opacity-100"></i>
-
-                    <div class="knob-outer">
-                        <div class="ticks" id="ticks"></div>
-                        <div class="knob-inner" id="knob">
-                            <div class="knob-mark"></div>
-                            <i class="fas fa-shopping-cart text-2xl text-black opacity-80"></i>
-                        </div>
-                    </div>
-                    <i class="fas fa-arrow-right opacity-50 cursor-pointer hover:opacity-100"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="social-icons">
-            <i class="fas fa-compact-disc"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-spotify"></i>
-        </div>
-        </div>
-        </head>
-
-        <!-- SEGUNDA PÁGINA: SOBRE -->
-        <section id="explorar" class="about-section">
-            <div class="vinyl-container">
-                <div class="vinyl-record">
-                    <div class="vinyl-label"></div>
+            <!-- Display Multimídia (Seu Código Original Polido) -->
+            <article class="multimedia-display group relative border border-white/5 hover:border-white/10 transition-all duration-500" id="display" role="region" aria-label="Painel de controle de áudio">
+                <span class="absolute left-8 top-6 text-[9px] tracking-[0.3em] opacity-30 font-mono select-none" aria-hidden="true">MODEL: GCO-8399</span>
+                
+                <!-- Equalizador Dinâmico -->
+                <div class="eq-container h-24 md:h-32" id="equalizer" aria-hidden="true">
+                    <!-- Gerado via JS -->
                 </div>
 
-                <nav class="curved-nav">
-                    <button class="nav-btn-round btn-pos-1" onclick="tab('club', this)">VNEW CLUB</button>
-                    <button class="nav-btn-round btn-pos-2 active" onclick="tab('retro', this)">VNEW RETRO</button>
-                    <button class="nav-btn-round btn-pos-3" onclick="tab('drop', this)">VNEW DROPs</button>
-                    <button class="nav-btn-round btn-pos-4" onclick="tab('express', this)">VNEW EXPRESS</button>
-                </nav>
-            </div>
-
-            <div class="w-1/2 pr-20">
-                <div id="panel-retro" class="info-card active">
-                    <p class="playfair-text">
-                        "Escolha a sua sonoridade entre clássicos analógicos e uma curadoria que imprime nostalgia e
-                        qualidade premium."
-                    </p>
+                <!-- Controle Knob -->
+                <div class="relative flex items-center justify-center scale-90 md:scale-100">
+                    <div id="ticks" class="absolute inset-[-20px] opacity-20 group-hover:opacity-50 transition-opacity"></div>
+                    <button id="knob" 
+                            class="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#050505] border border-white/10 shadow-[0_0_30px_rgba(0,0,0,1)] cursor-pointer active:scale-95 transition-transform"
+                            aria-label="Controle de volume analógico">
+                        <div class="absolute top-3 left-1/2 -translate-x-1/2 w-1.5 h-3 bg-white/50 rounded-full shadow-glow"></div>
+                    </button>
                 </div>
 
-                <div id="panel-club" class="info-card">
-                    <p class="playfair-text">
-                        "O programa de fidelidade feito para amantes do som. A cada 10 vinis adquiridos, o próximo
-                        clássico da sua coleção é por nossa conta."
-                    </p>
+                <!-- Indicador de Status -->
+                <div class="absolute right-8 bottom-6 hidden md:flex items-center gap-3">
+                    <span class="text-[8px] tracking-widest opacity-20 font-mono">ST-BY</span>
+                    <div class="w-2 h-2 bg-green-500/60 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.4)]"></div>
                 </div>
-
-                <div id="panel-drop" class="info-card">
-                    <p class="playfair-text">
-                        "Drops semanais com tiragens limitadas. Peças numeradas e cores exclusivas para quem busca
-                        raridades no mercado fonográfico."
-                    </p>
-                </div>
-
-                <div id="panel-express" class="info-card">
-                    <p class="playfair-text">
-                        "Logística de alta performance. Receba sua curadoria em qualquer lugar do Brasil com
-                        embalagem
-                        anti-impacto e entrega ultra-rápida."
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!--seção acervos-->
-        <section id="acervos" class="about-section">
-            <div class="w-full flex flex-col px-10">
-                <header class="flex justify-between items-start mb-8 flex-shrink-0">
-                    <div class="max-w-2xl">
-                        <h1 class="serif-title text-4xl tracking-widest uppercase mb-1">ACERVO VNEW</h1>
-                        <p class="text-gray-500 text-sm font-light italic">Mais de 10.000 vinis em nossa coleção</p>
-                    </div>
-                    <div class="hidden md:block w-32 opacity-40" aria-hidden="true">
-                        <svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="0.7">
-                            <circle cx="50" cy="50" r="45" />
-                            <circle cx="50" cy="50" r="12" />
-                            <path d="M85 20 L55 50" stroke-width="2" />
-                            <rect x="80" y="10" width="10" height="15" rx="2" />
-                        </svg>
-                    </div>
-                </header>
-                <div class="flex gap-10">
-                    <!-- SIDEBAR ESQUERDA (FIXA) -->
-                    <aside class="w-72 flex-shrink-0 flex flex-col">
-                        <div class="bg-black/40 border border-gray-800 rounded-[2rem] p-8 h-fit">
-
-                            <!-- Gênero -->
-                            <div class="mb-8">
-                                <label
-                                    class="block text-[10px] uppercase text-gray-600 mb-4 tracking-wider">Gênero</label>
-                                <div class="space-y-3">
-                                    <ul class="pl-4 space-y-3 text-gray-400 text-sm font-light">
-                                        <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="checkbox" class="accent-white">
-                                            Pop
-                                        </label>
-                                        <ul class="pl-4 space-y-3 text-gray-400 text-sm font-light">
-                                            <label class="flex items-center gap-2 cursor-pointer">
-                                                <input type="checkbox" class="accent-white">
-                                                Rock
-                                            </label>
-                                            <ul class="pl-4 space-y-3 text-gray-400 text-sm font-light">
-                                                <label class="flex items-center gap-2 cursor-pointer">
-                                                    <input type="checkbox" class="accent-white">
-                                                    Indie Rock
-                                                </label>
-                                                <ul class="pl-4 space-y-3 text-gray-400 text-sm font-light">
-                                                    <label class="flex items-center gap-2 cursor-pointer">
-                                                        <input type="checkbox" class="accent-white">
-                                                        Classic Rock
-                                                    </label>
-                                                    </label>
-                                                    <ul class="pl-4 space-y-3 text-gray-400 text-sm font-light">
-                                                        <label class="flex items-center gap-2 cursor-pointer">
-                                                            <input type="checkbox" class="accent-white">
-                                                            Nacional
-                                                        </label>
-                                </div>
-                            </div>
-
-                            <!-- Cor do Vinil -->
-                            <div class="mb-8">
-                                <label class="block text-[10px] uppercase text-gray-600 mb-4 tracking-wider">Cor do
-                                    Vinil</label>
-                                <div class="space-y-4 text-sm font-light">
-                                    <div class="flex items-center gap-3 opacity-60 hover:opacity-100 cursor-pointer">
-                                        <span
-                                            class="w-4 h-4 rounded-full bg-gradient-to-tr from-cyan-400 via-pink-400 to-yellow-400"></span>
-                                        <span>Splatter (Multi)</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 opacity-60 hover:opacity-100 cursor-pointer">
-                                        <span class="w-4 h-4 rounded-full bg-teal-600"></span>
-                                        <span>Marble (Teal)</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 border-l-2 border-white pl-3">
-                                        <span class="w-4 h-4 rounded-full border border-gray-600 bg-zinc-900"></span>
-                                        <span class="font-medium text-white">Classic Black</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Década -->
-                            <div class="mb-8">
-                                <label
-                                    class="block text-[10px] uppercase text-gray-600 mb-4 tracking-wider">Década</label>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="text-xs px-3 py-1.5 rounded-full border border-gray-800 text-gray-500 hover:border-gray-600 cursor-pointer">'60s</span>
-                                    <span
-                                        class="text-xs px-3 py-1.5 rounded-full border border-gray-800 text-gray-500 hover:border-gray-600 cursor-pointer">'70s</span>
-                                    <span
-                                        class="text-xs px-3 py-1.5 rounded-full border border-gray-800 text-gray-500 hover:border-gray-600 cursor-pointer">'80s</span>
-                                    <span
-                                        class="text-xs px-3 py-1.5 rounded-full border border-white text-white cursor-pointer">'90s</span>
-                                </div>
-                            </div>
-
-                            <!-- Faixa de Preço -->
-                            <div>
-                                <label class="block text-[10px] uppercase text-gray-600 mb-4 tracking-wider">Faixa de
-                                    Preço</label>
-                                <div class="px-1">
-                                    <input type="range"
-                                        class="w-full h-1 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-white">
-                                    <div class="flex justify-between text-[9px] mt-3 text-gray-600 tracking-tighter">
-                                        <span>$0</span>
-                                        <span>$100,000</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-                    <main class="flex-1 bg-white rounded-[3rem] overflow-hidden flex flex-col text-black">
-                        <section class="p-10 pb-6 border-b border-gray-100 flex-shrink-0">
-                            <h2 class="serif-title text-4xl italic mb-8">VNEW RETRO</h2>
+            </article>
+            </section>
                         </section>
 
-                        <section class="flex-1 overflow-y-auto p-10 pt-4" aria-label="Catálogo de Vinis">
-                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                            </div>
-                        </section>
-                    </main>
+                    <!-- --- SOBRE NÓS --- -->
+        <section id="sobre">
+            <div class="sobrenos">
+                <br><br><br><br>
+                <h1>SOBRE NÓS</h1>
+            </div>
+
+            <div class="h2">Bem-vindo a VNEW, onde o passado encontra o presente em uma celebração única da cultura
+                retrô. Somos apaixonados por tudo o que é vintage, desde a moda até a música, e estamos aqui para
+                compartilhar essa paixão com você. Na VNEW, você encontrará uma curadoria cuidadosa de peças clássicas,
+                eventos temáticos e uma comunidade vibrante de entusiastas do estilo retrô. Junte-se a nós para reviver
+                as melhores épocas e criar novas memórias com um toque de nostalgia.
+            </div>
+
+            <div class="imgsobre">
+                <img src="imagens/sobre.png" alt="Sobre a VNEW">
+            </div>
+        </section>
+
+        <!-- --- EXPLORAR --- -->
+        <section id="explorar">
+
+            <section id="explorar" class="about-section">
+                <div class="vinyl-container">
+                    <div class="vinyl-record">
+                        <div class="vinyl-label"></div>
+                    </div>
+
+                    <nav class="curved-nav">
+                        <button class="nav-btn-round btn-pos-1" onclick="tab('club', this)">VNEW CLUB</button>
+                        <button class="nav-btn-round btn-pos-2 active" onclick="tab('retro', this)">VNEW RETRO</button>
+                        <button class="nav-btn-round btn-pos-3" onclick="tab('drop', this)">VNEW DROPs</button>
+                        <button class="nav-btn-round btn-pos-4" onclick="tab('express', this)">VNEW EXPRESS</button>
+                    </nav>
+                </div>
+
+                <div class="w-1/2 pr-20">
+                    <div id="panel-retro" class="info-card active">
+                        <p class="playfair-text">
+                            "Escolha a sua sonoridade entre clássicos analógicos e uma curadoria que imprime nostalgia e
+                            qualidade premium."
+                        </p>
+                    </div>
+
+                    <div id="panel-club" class="info-card">
+                        <p class="playfair-text">
+                            "O programa de fidelidade feito para amantes do som. A cada 10 vinis adquiridos, o próximo
+                            clássico da sua coleção é por nossa conta."
+                        </p>
+                    </div>
+
+                    <div id="panel-drop" class="info-card">
+                        <p class="playfair-text">
+                            "Drops semanais com tiragens limitadas. Peças numeradas e cores exclusivas para quem busca
+                            raridades no mercado fonográfico."
+                        </p>
+                    </div>
+
+                    <div id="panel-express" class="info-card">
+                        <p class="playfair-text">
+                            "Logística de alta performance. Receba sua curadoria em qualquer lugar do Brasil com
+                            embalagem
+                            anti-impacto e entrega ultra-rápida."
+                        </p>
+                    </div>
+                </div>
+                
+                    <div class="final">
+                        <img src="imagens/vitrola.png" alt="Contato VNEW">
+                    </div>
+
+            </section>
+
+            <!-- --- ACERVOS --- -->
+<section id="acervos">
+    <div class="sobrenos">
+        <h1>ACERVOS</h1>
+        <span class="subtitulo">Mais de 10.000 vinis em nossa coleção</span>
+    </div>
+
+    <div class="h2">
+        Explore nossos acervos exclusivos, onde cada peça é uma viagem no tempo. De vinis clássicos a edições limitadas, nossa coleção é cuidadosamente selecionada para oferecer o melhor do universo retrô.
+    </div>
+
+    <div class="acervos-container">
+        <aside class="sidebar-filtros">
+            <div class="filtros-content">
+                <div class="filtro-grupo">
+                    <label class="filtro-label">Gênero</label>
+                    <div class="lista-checkbox">
+                        <label><input type="checkbox"> Pop</label>
+                        <label><input type="checkbox"> Rock</label>
+                        <label><input type="checkbox"> Indie Rock</label>
+                        <label><input type="checkbox"> Classic Rock</label>
+                        <label><input type="checkbox"> Nacional</label>
+                    </div>
+                </div>
+
+                <div class="filtro-grupo">
+                    <label class="filtro-label">Cor do Vinil</label>
+                    <div class="lista-cores">
+                        <div class="cor-item"><span class="swatch splatter"></span> Splatter (Multi)</div>
+                        <div class="cor-item"><span class="swatch marble"></span> Marble (Teal)</div>
+                        <div class="cor-item active"><span class="swatch black"></span> Classic Black</div>
+                    </div>
+                </div>
+
+                <div class="filtro-grupo">
+                    <label class="filtro-label">Década</label>
+                    <div class="tags-decada">
+                        <span>'60s</span>
+                        <span>'70s</span>
+                        <span>'80s</span>
+                        <span class="active">'90s</span>
+                    </div>
+                </div>
+
+                <div class="filtro-grupo">
+                    <label class="filtro-label">Faixa de Preço</label>
+                    <input type="range" class="price-slider">
+                    <div class="price-labels">
+                        <span>$0</span>
+                        <span>$100,000</span>
+                    </div>
                 </div>
             </div>
-            </div>
-        </section>
+        </aside>
 
-        <section id="contatos" class="about-section">
-        </section>
+        <main class="vitrine-produtos">
+            <header class="vitrine-header">
+                <h2>VNEW RETRO</h2>
+            </header>
+            <div class="grid-produtos">
+                </div>
+        </main>
+    </div>
+</section>
+            <!-- --- CONTATOS --- -->
+            <section id="contatos">
+                <div class="sobrenos">
+                    <br><br>
+                <h2 class="sobre">contato</h2>
+                </div>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        <span class="bar"></span>
+                    </div>
 
-        <script src="script.js"></script>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="message" name="message" placeholder="Sua mensagem" rows="4" required></textarea>
+                        <span class="bar"></span>
+                    </div>
+
+                    <button type="submit" class="btn-send">
+                        ENVIAR MENSAGEM
+                    </button>
+                </form>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <div class="opacity-30 text-[10px] tracking-[0.5em] font-mono">
+            &copy; 2026 VNEW | GABRIEL OLIVEIRA • CRAFTED WITH PASSION
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
+
+<!-- Final da primeira página -->

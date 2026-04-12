@@ -1,302 +1,314 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+ 
 :root {
-    --bg-dark: #050505;
-    --panel-bg: #0a0a0a;
-    --text-main: #ffffff;
-    --text-muted: rgba(255, 255, 255, 0.6);
-    --border-alpha: rgba(255, 255, 255, 0.15);
-    --accent-green: #4ade80;
-    --accent-yellow: #facc15;
-    --accent-red: #ef4444;
-    --glow: 0 0 15px rgba(255, 255, 255, 0.1);
-    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+ 
+  --accent-green: #22c55e;
+  --accent-yellow: #eab308;
+  --accent-red: #ef4444;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+ 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
+ 
+  font-family: 'Inter', sans-serif;
+ 
+  background-color: #050505;
+ 
+  color: white;
 }
-
-/* --- SEÇÃO HERO --- */
-.hero-container {
-    min-height: 100vh;
-    background: radial-gradient(circle at top right, #111, transparent), linear-gradient(to bottom, transparent 60%, rgba(5, 5, 5, 1) 100%);
-    position: relative;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+ 
+/*
+Tipografia Logo */
+.logo-vnew
+{
+ 
+  background: linear-gradient(180deg, #FFFFFF 30%, #444444 100%);
+ 
+  -webkit-background-clip: text;
+ 
+  -webkit-text-fill-color: transparent;
+ 
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));
 }
-
-/* Estilo do Logo VNEW */
-.logo-vnew {
-    font-size: 5rem;
-    font-weight: 900;
-    letter-spacing: -4px;
-    line-height: 0.9;
-    background: linear-gradient(to bottom, #fff, #888);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Display Multimídia */
+ 
+/* Display Multimédia Responsivo */
 .multimedia-display {
-    border: 1px solid var(--border-alpha);
     border-radius: 40px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(5px);
-    width: 400px;
-    height: 140px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+ 
+  padding: 3rem 2.5rem;
+ 
+  background: linear-gradient(145deg, rgba(20,20,20,0.6), rgba(5,5,5,0.8));
+ 
+  backdrop-filter: blur(20px);
+ 
+  width: 100%;
+ 
+  max-width: 600px;
+ 
+  display: flex;
+ 
+  align-items: center;
+ 
+  justify-content: space-between;
+ 
+  border: 1px solid rgba(255, 255, 255, 0.05);
+ 
+  box-shadow: 
+ 
+      inset 0 0 50px rgba(0,0,0,0.9),
+ 
+      0 30px 60px rgba(0,0,0,0.5);
 }
-
+ 
+/* Equalizador Colorido */
 .eq-container {
     display: flex;
     align-items: flex-end;
-    gap: 2px;
-    height: 60px;
-
+ 
+  gap: 4px;
+ 
+  flex: 1;
+ 
+  margin-right: 2rem;
 }
-
+ 
 .eq-bar {
-    width: 4px;
-    background: linear-gradient(to top, var(--accent-green), var(--accent-yellow), var(--accent-red));
-    border-radius: 2px;
-    transition: height 0.1s ease;
+ 
+  flex: 1;
+    max-width: 6px;
+    /* Gradiente colorido: Verde na base, Amarelo
+no meio, Vermelho no topo */
+    background: linear-gradient(to top, 
+ 
+      var(--accent-green) 0%, 
+ 
+      var(--accent-green) 60%, 
+ 
+      var(--accent-yellow) 80%, 
+ 
+      var(--accent-red) 100%);
+ 
+  border-radius: 4px;
+ 
+  transition: height 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+ 
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
 }
-
-/* Botões de controle */
-.control-btn {
-    border: 1px solid var(--border-alpha);
-    background: transparent;
-    color: white;
-    border-radius: 20px;
-    padding: 8px 24px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: var(--transition-smooth);
-    cursor: pointer;
-}
-
-.control-btn:hover {
-    background: white;
-    color: black;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Navegação Direita */
-.nav-link {
-    border: 1px solid white;
-    border-radius: 25px;
-    padding: 8px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 180px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 5px 15px rgba(0, 0, 0, 0.5);
-
-}
-
-.nav-link:hover {
-    background: white;
-    color: black;
-    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 5px 15px rgba(0, 0, 0, 0.5);
-
-}
-
-/* Knob (Botão Giratório) */
-.knob-outer {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background: conic-gradient(from 0deg, #222, #000, #222);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 2px 2px rgba(255, 255, 255, 0.1);
-}
-
-.knob-inner {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #eee, #999 40%, #444);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.1s;
-    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.knob-inner:active {
-    cursor: grabbing;
-}
-
-.ticks {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    pointer-events: none;
-
-}
-
+ 
+/* Knob
+Ticks */
 .tick {
-    position: absolute;
-    width: 2px;
-    height: 8px;
-    background: #555;
-    left: 50%;
-    transform-origin: 0 90px;
-    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 5px 15px rgba(0, 0, 0, 0.5);
-
+ 
+  position: absolute;
+ 
+  width: 2px;
+ 
+  height: 8px;
+ 
+  background: rgba(255,255,255,0.2);
+ 
+  left: 50%;
+ 
+  top: 50%;
+ 
+  transform-origin: 0 45px;
 }
-
-/* Linhas de fundo e desenhos técnicos */
-.tech-drawings {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 50%;
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-    opacity: 0.3;
-    pointer-events: none;
+ 
+/*
+Navegação */
+.nav-link {
+ 
+  font-size: 0.6rem;
+ 
+  letter-spacing: 0.2em;
+ 
+  padding: 10px 20px;
+ 
+  border-radius: 100px;
+ 
+  border: 1px solid rgba(255,255,255,0.1);
+ 
+  background: rgba(255,255,255,0.02);
+ 
+  backdrop-filter: blur(5px);
+ 
+  transition: all 0.3s ease;
+ 
+  opacity: 0.6;
 }
-
-
-.collection-tag {
-    font-size: 0.7rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-top: 5px;
+ 
+.nav-link:hover
+{
+ 
+  opacity: 1;
+ 
+  border-color: white;
+ 
+  background: rgba(255,255,255,0.05);
 }
-
-@keyframes bounce {
-
-    0%,
-    100% {
-        height: 10%;
+ 
+/* Social
+Cards (Bento Style) */
+.social-card
+{
+ 
+  background: rgba(255,255,255,0.03);
+ 
+  border: 1px solid rgba(255,255,255,0.08);
+ 
+  border-radius: 24px;
+ 
+  padding: 1.5rem;
+ 
+  display: flex;
+ 
+  flex-direction: column;
+ 
+  align-items: center;
+ 
+  justify-content: center;
+ 
+  gap: 0.75rem;
+ 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ 
+  position: relative;
+ 
+  overflow: hidden;
+}
+ 
+.social-card:hover
+{
+ 
+  background: rgba(255,255,255,0.06);
+ 
+  border-color: rgba(255,255,255,0.2);
+ 
+  transform: translateY(-5px);
+}
+ 
+.social-card
+.label {
+ 
+  font-size: 0.6rem;
+ 
+  letter-spacing: 0.2em;
+ 
+  opacity: 0.3;
+}
+ 
+.social-card
+i {
+ 
+  opacity: 0.7;
+}
+ 
+.social-card:hover
+i {
+ 
+  opacity: 1;
+}
+ 
+/* Glow
+Effect */
+.shadow-glow
+{
+ 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+ 
+@media (max-width:
+768px) {
+ 
+  .multimedia-display {
+ 
+      flex-direction: column;
+ 
+      gap: 3rem;
+        padding: 4rem 2rem 3rem;
     }
-
-    50% {
-        height: 100%;
+ 
+  .eq-container {
+ 
+      margin-right: 0;
+ 
+      width: 100%;
+ 
+      height: 120px !important;
     }
 }
+/*final da primeira pagina*/
 
-/* Botão de Catálogo (Volume) */
-.knob-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 120px;
-    z-index: 10;
-
-}
-
-.knob-mark {
-    position: absolute;
-    top: 10px;
-    width: 3px;
-    height: 15px;
-    background: #222;
-    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 5px 15px rgba(0, 0, 0, 0.5);
-
-
-}
-
-.social-icons {
-    position: absolute;
-    display: flex;
-    gap: 20px;
-    top: 650px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
-.social-icons i {
+.social-icon {
     font-size: 1.5rem;
-    cursor: pointer;
-    opacity: 0.8;
+    transition: all 0.3s ease;
+    /* Transição suave para todas as propriedades */
+    text-decoration: none;
 }
 
-.social-icons i:hover {
-    opacity: 1;
+.github {
+    color: white;
 }
 
-/* Desenhos de Vinil no fundo */
-.vinyl-stack {
-    position: relative;
-    top: 220px;
-    left: 1083px;
-    width: 600px;
-    height: auto;
-    opacity: 0.4;
-    z-index: 1;
-    pointer-events: none;
+.linkedin {
+    color: #0A66C2;
 }
 
-.turntable-draw {
-    position: relative;
-    top: 294px;
-    left: 0px;
-    width: 600px;
-    height: auto;
-    opacity: 0.5;
-    z-index: 1;
-    pointer-events: none;
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    /* Sobe 5px e aumenta um pouquinho */
+    filter: brightness(1.2);
 }
 
-.header-top {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    z-index: 10;
+.social-icon:active {
+    transform: scale(0.9);
 }
 
+/* --- texto RETRÔ --- */
 .retr-text {
     font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+
+}
+.retr-text:active {
+    transform: scale(0.5%);
+    filter: brightness(0.8);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/*codigo de barras*/
+.codigo_de_barras {
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.codigo_de_barras:active {
+    transform: scale(0.5%);
+}
+/* entrada do microfone*/
 .phone-mic-jacks {
     position: relative;
     border: 1px solid white;
-    border-radius: 30px;
+    border-radius: 40px;
     padding: 10px 20px;
     display: flex;
     gap: 15px;
     width: fit-content;
-    margin-top: 20px;
+    bottom: -450px;
     left: 50px;
     box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 5px 15px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
-
+.phone-mic-jacks:active{
+    transform: scale(80%);
+}
 .jack {
     width: 35px;
     height: 35px;
@@ -318,9 +330,46 @@ body {
     border-radius: 50%;
 }
 
-/* --- SEÇÃO SOBRE (DISCO) --- */
+/* --- SEÇÃO SOBRE --- */
+.sobrenos {
+    position: relative;
+    overflow: hidden;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-top: -10px;
+    margin-left: 60px;
+    background: linear-gradient(to bottom, #e5e3e3, #878282);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    display: block;
+}
+
+.h2 {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: left;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    max-width: 600px;
+    padding-left: 60px;
+}
+
+.imgsobre {
+    position: absolute;
+    left: 93%;
+    right: 30%;
+    top: 22%;
+    transform: translate(-80%, -80%) rotate(-25deg);
+    width: 900px;
+    filter: grayscale(100%) brightness(0.5);
+    z-index: 1;
+    opacity: 0.5;
+}
+/* --- SEÇÃO explorar --- */
 .about-section {
-    background-color: #0a0a0a;
+    background-color: #000000;
     min-height: 700px;
     display: flex;
     align-items: center;
@@ -420,7 +469,7 @@ body {
 }
 
 .info-card {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(35, 34, 34, 0.488);
     border: 1px solid var(--border-alpha);
     border-radius: 30px;
     padding: 60px;
@@ -433,49 +482,247 @@ body {
 .info-card.active {
     display: block;
 }
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 .playfair-text {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     line-height: 1.3;
     font-style: italic;
 }
-
-/* Decorativos */
-.turntable-draw,
-.vinyl-stack {
-    position: absolute;
-    opacity: 0.3;
-    pointer-events: none;
+/*explorar*/
+/* Container Principal de Acervos */
+.acervos-container {
+    display: flex;
+    gap: 40px;
+    padding: 60px;
+    align-items: flex-start;
 }
 
-.turntable-draw {
+/* Sidebar Estilizada */
+.sidebar-filtros {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.filtros-content {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    padding: 30px;
+}
+
+.filtro-grupo { margin-bottom: 30px; }
+
+.filtro-label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #666;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Checkboxes e Textos */
+.lista-checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-checkbox label {
+    font-size: 0.85rem;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Cores e Swatches */
+.lista-cores { display: flex; flex-direction: column; gap: 15px; }
+
+.cor-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.cor-item.active { opacity: 1; border-left: 2px solid white; padding-left: 10px; }
+
+.swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+.splatter { background: linear-gradient(to tr, #22d3ee, #f472b6, #fbbf24); }
+.marble { background: #0d9488; }
+.black { background: #18181b; border: 1px solid #333; }
+
+/* Tags de Década */
+.tags-decada { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tags-decada span {
+    font-size: 0.75rem;
+    padding: 6px 15px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    color: #555;
+    cursor: pointer;
+}
+
+.tags-decada span.active { border-color: white; color: white; }
+
+/* Vitrine Branca (O contraste que você queria) */
+.vitrine-produtos {
+    background: #f5f5f5; /* Branco levemente acinzentado (estilo papel) */
+    border-radius: 2rem; /* Bordas arredondadas do Figma */
+    width: 100%; /* Ele vai ocupar o espaço que sobrar ao lado da sidebar */
+    max-width: 900px; /* Limita para não virar um "paredão" */
+    height: auto;
+    min-height: 250px;/*altura*/
+    color: black;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra para destacar do fundo preto */
+    display: flex;
+    flex-direction: column;
+}
+.vitrine-header {
+    padding: 5px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.vitrine-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2rem;
+    margin: 0;
+}
+.grid-produtos {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+/* Container do Formulário */
+#contatos {
+    position: relative; /* Isso cria a "gaiola" para a vitrola */
+    overflow: hidden;   /* Evita que a imagem crie barras de rolagem */
+    width: 100%;
+    min-height: 800px;  /* Altura necessária para caber texto + formulário */
+}
+.contact-form {
+    overflow: hidden;
+    max-width: 500px;
+    margin-left: 250px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 2;
+}
+
+/* Grupos de Input */
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo dos Campos (Input e Textarea) */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Linha sutil */
+    color: white;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.4s ease;
+}
+
+/* Efeito de foco (Barra que "cresce" embaixo) */
+.contact-form .bar {
+    position: absolute;
     bottom: 0;
     left: 0;
-    width: 600px;
+    height: 1px;
+    width: 0;
+    background: white;
+    /* Ou use o seu gradiente se preferir */
+    transition: width 0.4s ease;
 }
 
-.vinyl-stack {
-    bottom: 0;
-    right: 0;
-    width: 400px;
+.contact-form input:focus~.bar,
+.contact-form textarea:focus~.bar {
+    width: 100%;
 }
-#acervos.about-section {
+
+/* Placeholder sutil */
+::placeholder {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+/* Botão de Envio (Estilo Retro-Moderno) */
+.btn-send {
+    align-self: flex-start;
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 50px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.btn-send:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.btn-send:active {
+    transform: scale(0.95);
+}
+
+.final {
+    position: absolute; /* Ela flutua... */
+    bottom: 128px;      /* ...perto do fundo da seção de contatos */
+    right: 50px;       /* ...na lateral direita */
+    width: 890px;
+    opacity: 0.2;
+    z-index: 1;        /* Atrás do formulário */
+    pointer-events: none;
+}
+.final img {
+    width: 100%;
+    filter: grayscale(100%);
+    /* Opcional: deixa ela PB para combinar com o clima retrô */
+}
+
+/* --- rodape --- */
+footer {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--border-alpha);
     display: flex;
-    flex-direction: column; /* Organiza header em cima e conteúdo embaixo */
-    align-items: center;    /* Centraliza o container principal */
-    justify-content: flex-start;
-    padding: 80px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p {
+    color: gray;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
 }
