@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
 
-:root {
-    --accent-green: #22c55e;
-    --accent-yellow: #eab308;
-    --accent-red: #ef4444;
-    --text-muted: #888;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
     font-family: 'Inter', sans-serif;
     background-color: #050505;
@@ -104,6 +93,31 @@ body {
     line-height: 1.6;
 }
 /* --- SEÇÃO explorar --- */
+.subtitulo {
+    position: relative;
+    overflow: hidden;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-top: 0px;
+    margin-left: 60px;
+    background: linear-gradient(to bottom, #e5e3e3, #878282);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    display: block;
+}
+
+.h2 {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: left;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    max-width: 600px;
+    padding-left: 60px;
+}
+
 .explorar-section {
     padding: 100px 20px;
 }
@@ -367,7 +381,6 @@ footer {
     text-transform: uppercase;
     text-align: center;
 }
-
 html,
 body {
     overflow-x: hidden;
