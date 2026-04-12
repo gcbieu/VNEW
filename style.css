@@ -4,12 +4,15 @@
     --accent-green: #22c55e;
     --accent-yellow: #eab308;
     --accent-red: #ef4444;
+    --text-muted: #888;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #050505;
@@ -135,6 +138,7 @@ Effect */
 .shadow-glow {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
+
 @media (max-width: 768px) {
     .multimedia-display {
         flex-direction: column;
@@ -160,6 +164,7 @@ Effect */
 .github {
     color: white;
 }
+
 .linkedin {
     color: #0A66C2;
 }
@@ -201,49 +206,7 @@ Effect */
     padding-left: 0px;
     margin: 0 auto;
 }
-
-.imgsobre {
-    position: static;
-    left: 90%;
-    right: 30%;
-    top: 150%;
-    transform: translate(-80%, -80%) rotate(-15deg);
-    width: 100px;
-    max-width: 400px;
-    margin: 40px auto;
-    display: block;
-    filter: grayscale(100%) brightness(0.5);
-    z-index: 1;
-    opacity: 0.5;
-}
-
 /* --- SEÇÃO explorar --- */
-.acervos-header {
-    position: relative;
-    overflow: hidden;
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: -2px;
-    margin-top: 10px;
-    margin-left: 60px;
-    background: linear-gradient(to bottom, #e5e3e3, #878282);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: normal;
-    display: block;
-}
-
-.h3 {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    line-height: 1.7;
-    max-width: 600px;
-    padding-left: 0px;
-    margin-left: 60px;
-}
-
-
 .about-section {
     background-color: #000000;
     min-height: 700px;
@@ -252,6 +215,7 @@ Effect */
     position: relative;
     padding: 100px 0;
     border-top: 1px solid var(--border-alpha);
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -271,6 +235,7 @@ Effect */
         left: 0;
         width: 250px;
         height: 250px;
+        margin: 0 auto;
     }
 
     .curved-nav {
@@ -581,11 +546,12 @@ Effect */
 .contact-form {
     overflow: hidden;
     max-width: 500px;
-    margin-left: 250px;
+    margin: 40px auto;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding: 0 20px;
     z-index: 2;
 }
 
@@ -677,8 +643,11 @@ Effect */
 @media (min-width: 1024px) {
     .final {
         display: block;
-        width: 500px;
+        position: absolute;
         right: 20px;
+        bottom: 100px;
+        width: 400px;
+        opacity: 0.2;
     }
 }
 
