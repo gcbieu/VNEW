@@ -7,6 +7,7 @@
     <title>VNEW | O retrô mais New</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="imagens/vinyl.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -26,6 +27,7 @@
         <section id="home"
             class="relative flex min-h-screen flex-col items-center justify-center p-6 transition-opacity duration-700">
             <div class="w-full max-w-5xl flex flex-col items-center gap-10">
+                <div class="secao-ativa-trigger" data-section="home"></div>
 
                 <header class="text-center space-y-4">
                     <div class="brand-header flex flex-col items-center">
@@ -42,10 +44,28 @@
                         </div>
                     </div>
                 </header>
+
+                <!-- links sociais -->
+                <div class="social-links-colored">
+                    <a href="https://linkedin.com/in/SEU-PERFIL" target="_blank" class="mini-link-col linkedin-bg"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://github.com/SEU-GITHUB" target="_blank" class="mini-link-col github-bg"
+                        title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="#home" class="mini-link-col world-bg" title="Meu Portfólio">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
         </section>
 
         <!--- SOBRE NÓS -->
         <section id="sobre" class="sobre-section">
+            <div class="secao-ativa-trigger" data-section="sobre"></div>
             <h2 class="subtitulo">SOBRE</h2>
 
             <div class="sobre-grid">
@@ -80,48 +100,47 @@
         <!-- --- experiencia --- -->
 
         <!---EXPERIÊNCIA-->
-        <section id="experiencia" class="experiencia-section">
-            <h2 class="subtitulo">EXPERIÊNCIA</h2>
+        <h2 class="explorar-contato">EXPERIÊNCIA</h2>
 
-            <div class="stats">
-                <div class="stat">
-                    <h3>98%</h3>
-                    <span>Satisfação</span>
-                </div>
-
-                <div class="stat">
-                    <h3>+10K</h3>
-                    <span>Vinis vendidos</span>
-                </div>
-
-                <div class="stat">
-                    <h3>3 dias</h3>
-                    <span>Entrega média</span>
-                </div>
+        <div class="stats">
+            <div class="stat">
+                <h3>98%</h3>
+                <span>Satisfação</span>
             </div>
 
-            <div class="feedbacks">
-
-                <div class="feedback">
-                    <p>"Qualidade absurda, embalagem perfeita."</p>
-                    <span>— Cliente VNEW</span>
-                </div>
-
-                <div class="feedback">
-                    <p>"Chegou rápido e o vinil veio impecável."</p>
-                    <span>— Colecionador</span>
-                </div>
-
-                <div class="feedback">
-                    <p>"Curadoria muito diferenciada."</p>
-                    <span>— Membro Club</span>
-                </div>
-
+            <div class="stat">
+                <h3>+10K</h3>
+                <span>Vinis vendidos</span>
             </div>
-        </section>
+
+            <div class="stat">
+                <h3>3 dias</h3>
+                <span>Entrega média</span>
+            </div>
+        </div>
+
+        <div class="feedbacks">
+
+            <div class="feedback">
+                <p>"Qualidade absurda, embalagem perfeita."</p>
+                <span>— Cliente VNEW</span>
+            </div>
+
+            <div class="feedback">
+                <p>"Chegou rápido e o vinil veio impecável."</p>
+                <span>— Colecionador</span>
+            </div>
+
+            <div class="feedback">
+                <p>"Curadoria muito diferenciada."</p>
+                <span>— Membro Club</span>
+            </div>
+
+        </div>
 
         <!---EXPLORAR-->
         <section id="explorar" class="explorar-section">
+            <div class="secao-ativa-trigger" data-section="explorar"></div>
             <h2 class="explorar-contato">EXPLORAR</h2>
 
             <div class="explorar-container">
@@ -176,6 +195,7 @@
 
         <!-- --- ACERVOS --- -->
         <section id="acervos">
+            <div class="secao-ativa-trigger" data-section="acervos"></div>
             <div class="subtitulo2">
                 <h1>ACERVO</h1>
                 <span class="subtitulo2">Mais de 10.000 vinis em nossa coleção</span>
@@ -189,98 +209,124 @@
             <!-- NEWRETRO -->
             <div class="categoria">
                 <h3>NEWRETRO</h3>
-                <div class="scroll-row">
-                    <img
-                        src="https://cdn.image.st-hatena.com/image/scale/1beaced4f524f1e502aa16d5a3b49a1ff638d898/backend=imagemagick;version=1;width=1300/https://cdn-ak.f.st-hatena.com/images/fotolife/t/tyunne/20260411/20260411063000.jpg">
-                    <img src="https://m.media-amazon.com/images/I/71OfMiBvnOL._SY342_.jpg">
-                    <img
-                        src="https://th.bing.com/th/id/R.cadb154ff00bfacd515db30329f70a7d?rik=ZY2Zy9l8KABmEw&pid=ImgRaw&r=0">
-                    <img
-                        src="https://tse1.explicit.bing.net/th/id/OIP.vz5jdo7IzczNtuBHsWvs4QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://tse1.mm.bing.net/th/id/OIP.Ii8yIaSGES9ki3irx9DRtQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://tse4.mm.bing.net/th/id/OIP.y8JmLBJgMsF6Q0Mn8-isbwHaFc?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://tse4.mm.bing.net/th/id/OIP.LXRdoVuWR000Z53DWlyL-wAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://tse4.mm.bing.net/th/id/OIP.tDF47xIYNyIX4ajAGBiS2AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://th.bing.com/th/id/R.7e345ad019fa5b2da74849af9f51b4bd?rik=GCEIXULlinQLXg&pid=ImgRaw&r=0">
+                <div class="carousel-container relative"><button class="seta-btn left"
+                        onclick="scrollCanvas('retro', -300)">&#10094;</button>
+                    <div class="scroll-row" id="carousel-retro">
+                        <img
+                            src="https://cdn.image.st-hatena.com/image/scale/1beaced4f524f1e502aa16d5a3b49a1ff638d898/backend=imagemagick;version=1;width=1300/https://cdn-ak.f.st-hatena.com/images/fotolife/t/tyunne/20260411/20260411063000.jpg">
+                        <img src="https://m.media-amazon.com/images/I/71OfMiBvnOL._SY342_.jpg">
+                        <img
+                            src="https://th.bing.com/th/id/R.cadb154ff00bfacd515db30329f70a7d?rik=ZY2Zy9l8KABmEw&pid=ImgRaw&r=0">
+                        <img
+                            src="https://tse1.explicit.bing.net/th/id/OIP.vz5jdo7IzczNtuBHsWvs4QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://tse1.mm.bing.net/th/id/OIP.Ii8yIaSGES9ki3irx9DRtQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://tse4.mm.bing.net/th/id/OIP.y8JmLBJgMsF6Q0Mn8-isbwHaFc?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://tse4.mm.bing.net/th/id/OIP.LXRdoVuWR000Z53DWlyL-wAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://tse4.mm.bing.net/th/id/OIP.tDF47xIYNyIX4ajAGBiS2AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://th.bing.com/th/id/R.7e345ad019fa5b2da74849af9f51b4bd?rik=GCEIXULlinQLXg&pid=ImgRaw&r=0">
+                    </div>
+                    <button class="seta-btn right" onclick="scrollCanvas('retro', 300)">&#10095;</button>
                 </div>
+            </div>
             </div>
 
 
             <!-- POP -->
             <div class="categoria">
                 <h3>POP</h3>
-                <div class="scroll-row">
-                    <img
-                        src="https://www.bing.com/th?id=OPHS.llAsLr1vvCwLLQ474C474&o=5&pid=21.1&w=128&h=128&qlt=100&dpr=1,3&o=2&bw=6&bc=FFFFFF">
-                    <img
-                        src="https://th.bing.com/th/id/OIP.tzhy4lF7CT-eH3bizQ0yKAHaGw?w=208&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-                    <img
-                        src=https://tse4.mm.bing.net/th/id/OIP.jq6peAARaW1ynQ9x7P793AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://i.discogs.com/0TpAyCKpmoro6q0Q1llFsHMfW55Vcg_yUrR71QrYua8/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNTg5/ODYtMTUxMDI0MTI3/MS01Nzk3LmpwZWc.jpeg">
-                    <img
-                        src="https://tse3.mm.bing.net/th/id/OIP.9Sc-KpdR5V8YSEPRMg5r5QHaHa?rs=1&pid=ImgDetMain&o=7&rm=34">
-                    <img
-                        src="https://i.discogs.com/kqr1kUB8AP9slQYzDRHA_vM8GrpWlLJNa6fa23jQd00/rs:fit/g:sm/q:90/h:589/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQxMTAy/NjktMTU1Njk5MDY3/Ni0xNDMzLmpwZWc.jpeg">
-                    <img src="https://images.genius.com/83f44360f80e0d126eb9004b90417644.300x300x1.png">
-                    <img src="https://uproxx.com/wp-content/uploads/2024/03/Dua-Lipa-Radical-Optimism.jpg">
-                    <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/4/7/6/4/824701576683558.jpg">
-                    <img
-                        src="https://tse1.explicit.bing.net/th/id/OIP.zWvJ9wS_1L3f2Z6d_4yNqwAAAA?w=430&h=431&rs=1&pid=ImgDetMain&o=7&rm=3">
-
+                <!-- seta -->
+                <div class="carousel-container relative"><button class="seta-btn left"
+                        onclick="scrollCanvas('pop', -300)">&#10094;</button>
+                    <div class="scroll-row" id="carousel-pop">
+                        <img
+                            src="https://www.bing.com/th?id=OPHS.llAsLr1vvCwLLQ474C474&o=5&pid=21.1&w=128&h=128&qlt=100&dpr=1,3&o=2&bw=6&bc=FFFFFF">
+                        <img
+                            src="https://th.bing.com/th/id/OIP.tzhy4lF7CT-eH3bizQ0yKAHaGw?w=208&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+                        <img
+                            src=https://tse4.mm.bing.net/th/id/OIP.jq6peAARaW1ynQ9x7P793AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://i.discogs.com/0TpAyCKpmoro6q0Q1llFsHMfW55Vcg_yUrR71QrYua8/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNTg5/ODYtMTUxMDI0MTI3/MS01Nzk3LmpwZWc.jpeg">
+                        <img
+                            src="https://tse3.mm.bing.net/th/id/OIP.9Sc-KpdR5V8YSEPRMg5r5QHaHa?rs=1&pid=ImgDetMain&o=7&rm=34">
+                        <img
+                            src="https://i.discogs.com/kqr1kUB8AP9slQYzDRHA_vM8GrpWlLJNa6fa23jQd00/rs:fit/g:sm/q:90/h:589/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQxMTAy/NjktMTU1Njk5MDY3/Ni0xNDMzLmpwZWc.jpeg">
+                        <img src="https://images.genius.com/83f44360f80e0d126eb9004b90417644.300x300x1.png">
+                        <img src="https://uproxx.com/wp-content/uploads/2024/03/Dua-Lipa-Radical-Optimism.jpg">
+                        <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/4/7/6/4/824701576683558.jpg">
+                        <img
+                            src="https://tse1.explicit.bing.net/th/id/OIP.zWvJ9wS_1L3f2Z6d_4yNqwAAAA?w=430&h=431&rs=1&pid=ImgDetMain&o=7&rm=3">
+                    </div>
+                    <button class="seta-btn right" onclick="scrollCanvas('pop', 300)">&#10095;</button>
                 </div>
+            </div>
             </div>
 
             <!-- ROCK -->
             <div class="categoria">
                 <h3>ROCK</h3>
-                <div class="scroll-row">
-                    <img
-                        src="https://tse3.mm.bing.net/th/id/OIP.ORoBfpXkhOfl2WjZOJ3NnAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://th.bing.com/th/id/OIP.Q_VqE6x543ThTvM_8TNGJwHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://th.bing.com/th/id/OIP.nC2hUq92V0E0sob1fuTlngHaFj?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img src="https://m.media-amazon.com/images/I/61vG6-ILgmL._AC_SX679_.jpg">
-                    <img src="https://m.media-amazon.com/images/I/91ksS-ioRpL._AC_SX300_SY300_QL70_ML2_.jpg">
-                    <img
-                        src="https://tse4.mm.bing.net/th/id/OIP.4K_90Ky_4zCdDBLcIkIRkwHaGd?w=1200&h=1047&rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://tse2.mm.bing.net/th/id/OIP.s3cfFN-o_WGRWmxQOn-VcgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img src="https://thewallcomplete.com/wp-content/uploads/2016/03/Pink_Floyd_The_Wall_front.jpg">
-                    <img
-                        src="https://tse4.mm.bing.net/th/id/OIP.NOkruKhKKh0rBlMBZGNG8wHaHf?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img
-                        src="https://tse4.mm.bing.net/th/id/OIP.0Z10XDBcFKcLB2O8TvasmQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                <div class="carousel-container relative"><button class="seta-btn left"
+                        onclick="scrollCanvas('rock', -300)">&#10094;</button>
+                    <div class="scroll-row" id="carousel-rock">
+                        <img
+                            src="https://tse3.mm.bing.net/th/id/OIP.ORoBfpXkhOfl2WjZOJ3NnAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://th.bing.com/th/id/OIP.Q_VqE6x543ThTvM_8TNGJwHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://th.bing.com/th/id/OIP.nC2hUq92V0E0sob1fuTlngHaFj?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img src="https://m.media-amazon.com/images/I/61vG6-ILgmL._AC_SX679_.jpg">
+                        <img src="https://m.media-amazon.com/images/I/91ksS-ioRpL._AC_SX300_SY300_QL70_ML2_.jpg">
+                        <img
+                            src="https://tse4.mm.bing.net/th/id/OIP.4K_90Ky_4zCdDBLcIkIRkwHaGd?w=1200&h=1047&rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://tse2.mm.bing.net/th/id/OIP.s3cfFN-o_WGRWmxQOn-VcgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img src="https://thewallcomplete.com/wp-content/uploads/2016/03/Pink_Floyd_The_Wall_front.jpg">
+                        <img
+                            src="https://tse4.mm.bing.net/th/id/OIP.NOkruKhKKh0rBlMBZGNG8wHaHf?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img
+                            src="https://tse4.mm.bing.net/th/id/OIP.0Z10XDBcFKcLB2O8TvasmQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                    </div>
+                    <button class="seta-btn right" onclick="scrollCanvas('rock', 300)">&#10095;</button>
                 </div>
+
+            </div>
             </div>
 
             <!-- nacional -->
             <div class="categoria">
                 <h3>NACIONAL</h3>
-                <div class="scroll-row">
-                    <img src="https://akamai.sscdn.co/letras/360x360/albuns/e/2/7/4/119861661198563.jpg">
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.MHulQOwUCpWqIGIUnDYG_QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    <img src="https://akamai.sscdn.co/letras/360x360/albuns/d/7/b/7/291011710276575.jpg">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/e/e1/DVD_Banda_Calypso_na_Amaz%C3%B4nia.png">
-                    <img src="https://akamai.sscdn.co/letras/360x360/albuns/e/d/2/5/91301747071205.jpg">
-                    <img src="https://akamai.sscdn.co/letras/360x360/albuns/0/c/0/c/175751441737618.jpg">
-                    <img src="https://s2-g1.glbimg.com/6decO-W6pm8HCNM5ZubgXSQidMc=/0x0:1500x1500/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/v/v/sIqlXeTTWdgokE2oJEEA/novosbaianoscapa1972.jpg">
-                    <img src="https://m.media-amazon.com/images/I/81TRI0NF5LL._AC_SX679_.jpg">
-                    <img src="https://m.media-amazon.com/images/I/711txXupcwL._AC_SX679_.jpg">
-                    <img src="https://tse1.explicit.bing.net/th/id/OIP.Q6sXFbQKbPVn7_7HWLjf5gHaHO?rs=1&pid=ImgDetMain&o=7&rm=3">
+                <div class="carousel-container relative"><button class="seta-btn left"
+                        onclick="scrollCanvas('nacional', -300)">&#10094;</button>
+                    <div class="scroll-row" id="carousel-nacional">
+                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/e/2/7/4/119861661198563.jpg">
+                        <img
+                            src="https://tse2.mm.bing.net/th/id/OIP.MHulQOwUCpWqIGIUnDYG_QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/d/7/b/7/291011710276575.jpg">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/pt/e/e1/DVD_Banda_Calypso_na_Amaz%C3%B4nia.png">
+                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/e/d/2/5/91301747071205.jpg">
+                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/0/c/0/c/175751441737618.jpg">
+                        <img
+                            src="https://s2-g1.glbimg.com/6decO-W6pm8HCNM5ZubgXSQidMc=/0x0:1500x1500/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/v/v/sIqlXeTTWdgokE2oJEEA/novosbaianoscapa1972.jpg">
+                        <img src="https://m.media-amazon.com/images/I/81TRI0NF5LL._AC_SX679_.jpg">
+                        <img src="https://m.media-amazon.com/images/I/711txXupcwL._AC_SX679_.jpg">
+                        <img
+                            src="https://tse1.explicit.bing.net/th/id/OIP.Q6sXFbQKbPVn7_7HWLjf5gHaHO?rs=1&pid=ImgDetMain&o=7&rm=3">
+                    </div>
+                    <button class="seta-btn right" onclick="scrollCanvas('nacional', 300)">&#10095;</button>
                 </div>
+            </div>
             </div>
 
         </section>
 
         <!-- --- CONTATOS --- -->
         <section id="contatos">
+            <div class="secao-ativa-trigger" data-section="contatos"></div>
             <div class="explorar-contato">
                 <h1>contato</h1>
             </div>
@@ -307,14 +353,30 @@
             </form>
 
         </section>
+
+
     </main>
 
     <!-- rodapé -->
     <footer>
         <div class="footer-content">
             <p>© 2026 Gabriel Oliveira • Crafted with Passion</p>
+                        </div>
+
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/SEU-PERFIL" target="_blank" class="footer-link linkedin"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/SEU-GITHUB" target="_blank" class="footer-link github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#home" class="footer-link world" title="Portfólio">
+                    <i class="fas fa-globe"></i>
+                </a>
         </div>
     </footer>
+    <script src="script.js"></script>
 
 </body>
 

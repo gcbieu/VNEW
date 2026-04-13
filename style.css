@@ -39,31 +39,98 @@ body {
 }
 
 /*Rede social*/
-.social-icon {
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    /* Transição suave para todas as propriedades */
+.social-links-colored {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.mini-link-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    font-size: 1.4rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito elástico */
     text-decoration: none;
 }
 
-.github {
-    color: white;
+/* LinkedIn - Azul */
+.linkedin-bg:hover {
+    background: #0A66C2;
+    border-color: #0A66C2;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+    transform: scale(1.1) translateY(-5px);
 }
 
-.linkedin {
+/* GitHub - Gato (Preto/Grafite) */
+.github-bg:hover {
+    background: #333;
+    border-color: #444;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* Mundo - Verde */
+.world-bg:hover {
+    background: #2ea44f; /* Verde estilo GitHub/Vercel */
+    border-color: #2ea44f;
+    box-shadow: 0 0 20px rgba(46, 164, 79, 0.4);
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* Ajuste para ícones no Mobile */
+@media (max-width: 768px) {
+    .mini-link-col {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Efeito ao passar o mouse */
+.mini-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 
+                0 0 15px rgba(255, 255, 255, 0.1); /* Brilho sutil */
+}
+
+/* Mobile: Aumenta um pouco a área de toque */
+@media (max-width: 768px) {
+    .mini-link {
+        width: 55px;
+        height: 55px;
+    }
+}
+/* Efeito Hover Geral */
+.btn-link:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Cores específicas para o hover */
+.linkedin-link:hover {
     color: #0A66C2;
 }
 
-.social-icon:hover {
-    transform: translateY(-5px) scale(1.1);
-    /* Sobe 5px e aumenta um pouquinho */
-    filter: brightness(1.2);
+.github-link:hover {
+    color: #f0f6fc;
 }
 
-.social-icon:active {
-    transform: scale(0.9);
+.portfolio-link:hover {
+    background: white;
+    color: black;
 }
-
 /* --- SEÇÃO SOBRE --- */
 .sobre-section {
     padding: 100px 20px;
@@ -71,8 +138,8 @@ body {
 }
 
 .sobre-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column; /* Celular: uma embaixo da outra */
     gap: 30px;
     max-width: 1000px;
     margin: 60px auto 0;
@@ -86,6 +153,18 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     transition: 0.3s;
+}
+
+/* Quando a tela for maior que 768px (Computador/Tablet) */
+@media (min-width: 768px) {
+    .sobre-grid {
+        flex-direction: row; /* Computador: lado a lado */
+        justify-content: space-between;
+    }
+
+    .sobre-card {
+        flex: 1; /* Faz todas as caixas terem o mesmo tamanho */
+    }
 }
 
 .sobre-card:hover {
@@ -175,7 +254,6 @@ span.subtitulo2 {
     font-size: 3.5rem;
     font-weight: 900;
     letter-spacing: -2px;
-    margin-left: 60px !important;
     /* remova se quiser centralizar de verdade */
     background: linear-gradient(to bottom, #ffffff, #a0a0a0);
     -webkit-background-clip: text;
@@ -247,21 +325,23 @@ span.subtitulo2 {
         max-width: 250px;
         height: auto;
     }
-    nav.fixed {
-        top: 15px; 
-        right: 50%; 
-        transform: translateX(50%); 
+nav.fixed {
+        top: 20px !important; 
+        right: 0 !important; /* Remove a trava da direita */
+        left: 0 !important;  /* Libera a esquerda */
+        margin: 0 auto;      /* Centraliza */
+        width: 90% !important; /* Dá largura ao menu */
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap;     /* Permite que os botões quebrem linha se necessário */
         justify-content: center;
-        width: 95%; 
-        gap: 8px;
+        gap: 10px;
+        position: fixed;
     }
 
     .nav-link {
-        font-size: 0.7rem; 
-        padding: 8px 12px; 
-        opacity: 1;
+        font-size: 0.75rem !important; /* Um pouco maior para ser clicável */
+        padding: 10px 15px !important;
+        flex-shrink: 0; /* Impede que o botão "esmague" o texto */
     }
     .sobre-grid {
         grid-template-columns: 1fr; /* Força uma coluna só */
@@ -281,7 +361,6 @@ span.subtitulo2 {
     .scroll-row {
         padding: 20px; /* Reduz o recuo lateral */
     }
-    
     .scroll-row img {
         width: 180px; /* Discos menores no mobile para facilitar o scroll */
         height: 180px;
@@ -356,9 +435,45 @@ span.subtitulo2 {
     text-transform: uppercase;
     white-space: normal;
 }
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.seta-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seta-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+.seta-btn.left { left: 10px; }
+.seta-btn.right { right: 10px; }
+
+/* Esconde as setas no mobile para usar o touch natural */
+@media (max-width: 768px) {
+    .seta-btn { display: none; }
+}
 
 /*imagens acervos*/
-
 .scroll-row {
     display: flex;
     gap: 20px;
@@ -366,6 +481,7 @@ span.subtitulo2 {
     padding: 20px 60px 50px 60px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
 }
 
 .scroll-row img {
@@ -376,6 +492,7 @@ span.subtitulo2 {
     flex-shrink: 0;
     filter: brightness(0.8);
     transition: 0.3s;
+    scroll-snap-align: center;
 }
 
 .scroll-row img:hover {
@@ -478,23 +595,47 @@ span.subtitulo2 {
 
 /* --- rodape --- */
 footer {
-    width: 100%;
-    padding: 40px 20px;
-    background-color: var(--bg-dark);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-content p {
-    color: gray;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    padding: 60px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
 }
 
+.footer-content p {
+    font-size: 0.75rem;
+    opacity: 0.4;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-link {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.3); /* Cor discreta inicial */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Cores ao passar o rato (Hover) */
+.footer-link.linkedin:hover {
+    color: #0A66C2;
+    transform: translateY(-3px);
+}
+
+.footer-link.github:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+}
+
+.footer-link.world:hover {
+    color: #2ea44f; /* O verde que pediste */
+    transform: translateY(-3px);
+}
 html,
 body {
     overflow-x: hidden;
