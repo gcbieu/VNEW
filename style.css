@@ -224,7 +224,10 @@ span.subtitulo2 {
     filter: brightness(1.1);
     transform: scale(1.05);
 }
-
+#contato {
+    margin-top: 50px !important;
+    padding-top: 40px !important;
+}
 /* --- 1. ESTILO BOLINHA DE VIDRO (DESKTOP) --- */
 .carousel-container {
     position: relative;
@@ -562,6 +565,7 @@ footer {
 
     .scroll-row {
         padding: 10px 20px 40px !important;
+        padding-bottom: 80px !important;
     }
 
     .scroll-row img {
@@ -622,5 +626,8 @@ footer {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
+    }
+    #contato {
+        margin-top: 30px !important;
     }
 }
