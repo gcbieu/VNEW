@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const observerOptions = {
         root: null,
-        threshold: 0.1 // Só ativa quando 60% da seção estiver na tela
+        threshold: 0.1 // ativa o botao na tela
     };
 
     const observer = new IntersectionObserver((entries) => {
