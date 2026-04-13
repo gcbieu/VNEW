@@ -602,6 +602,24 @@ footer {
     }
 
     .scroll-row {
-        padding: 10px 20px 40px !important;
+        display: flex !important;
+        flex-wrap: nowrap !important; /* ISSO impede de empilhar */
+        overflow-x: auto !important; /* ISSO permite deslizar pro lado */
+        -webkit-overflow-scrolling: touch; /* Deixa o deslize suave no iPhone */
+        padding: 20px 30px 60px 30px !important;
+        gap: 15px !important; /* Espaço entre os álbuns */ 
+    }
+    .vinil-item {
+        flex: 0 0 160px !important; /* O '0 0' diz: NÃO encolha e NÃO cresça */
+        width: 160px !important;
+        height: 160px !important;
+        margin-right: 0px !important; /* O gap já resolve o espaço */
+    }
+
+    /* 3. Garante que as imagens preencham o quadrado */
+    .capa-album, .disco-midia {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
 }
