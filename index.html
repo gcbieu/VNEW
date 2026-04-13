@@ -297,32 +297,51 @@
             </div>
 
             <!-- nacional -->
-            <div class="categoria">
-                <h3>NACIONAL</h3>
-                <div class="carousel-container relative"><button class="seta-btn left"
-                        onclick="scrollCanvas('nacional', -300)">&#10094;</button>
-                    <div class="scroll-row" id="carousel-nacional">
-                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/e/2/7/4/119861661198563.jpg">
-                        <img
-                            src="https://tse2.mm.bing.net/th/id/OIP.MHulQOwUCpWqIGIUnDYG_QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/d/7/b/7/291011710276575.jpg">
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/pt/e/e1/DVD_Banda_Calypso_na_Amaz%C3%B4nia.png">
-                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/e/d/2/5/91301747071205.jpg">
-                        <img src="https://akamai.sscdn.co/letras/360x360/albuns/0/c/0/c/175751441737618.jpg">
-                        <img
-                            src="https://s2-g1.glbimg.com/6decO-W6pm8HCNM5ZubgXSQidMc=/0x0:1500x1500/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/v/v/sIqlXeTTWdgokE2oJEEA/novosbaianoscapa1972.jpg">
-                        <img src="https://m.media-amazon.com/images/I/81TRI0NF5LL._AC_SX679_.jpg">
-                        <img src="https://m.media-amazon.com/images/I/711txXupcwL._AC_SX679_.jpg">
-                        <img
-                            src="https://tse1.explicit.bing.net/th/id/OIP.Q6sXFbQKbPVn7_7HWLjf5gHaHO?rs=1&pid=ImgDetMain&o=7&rm=3">
-                    </div>
-                    <button class="seta-btn right" onclick="scrollCanvas('nacional', 300)">&#10095;</button>
-                </div>
-            </div>
+<div class="categoria">
+    <h3>NACIONAL</h3>
+    <div class="carousel-container relative">
+        <button class="seta-btn left" onclick="scrollCanvas('nacional', -300)">&#10094;</button>
+        
+        <div class="scroll-row" id="carousel-nacional">
+
+            <div class="vinil-item" onclick="toggleVinil(this)">
+                <img src="imagens/vinyl.png" class="disco-midia">
+                <img src="https://akamai.sscdn.co/letras/360x360/albuns/e/2/7/4/119861661198563.jpg" class="capa-album">
             </div>
 
-        </section>
+            <div class="vinil-item" onclick="toggleVinil(this)">
+                <img src="imagens/vinyl.png" class="disco-midia">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.MHulQOwUCpWqIGIUnDYG_QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="capa-album">
+            </div>
+
+            <div class="vinil-item" onclick="toggleVinil(this)">
+                <img src="imagens/vinyl.png" class="disco-midia">
+                <img src="https://akamai.sscdn.co/letras/360x360/albuns/d/7/b/7/291011710276575.jpg" class="capa-album">
+            </div>
+
+            <div class="vinil-item" onclick="toggleVinil(this)">
+                <img src="imagens/vinyl.png" class="disco-midia">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/e/e1/DVD_Banda_Calypso_na_Amaz%C3%B4nia.png" class="capa-album">
+            </div>
+
+            <div class="vinil-item" onclick="toggleVinil(this)">
+                <img src="imagens/vinyl.png" class="disco-midia">
+                <img src="https://akamai.sscdn.co/letras/360x360/albuns/e/d/2/5/91301747071205.jpg" class="capa-album">
+            </div>
+
+            <div class="vinil-item" onclick="toggleVinil(this)">
+                <img src="imagens/vinyl.png" class="disco-midia">
+                <img src="https://akamai.sscdn.co/letras/360x360/albuns/0/c/0/c/175751441737618.jpg" class="capa-album">
+            </div>
+
+            <div class="vinil-item" onclick="toggleVinil(this)">
+                <img src="imagens/vinyl.png" class="disco-midia">
+                <img src="https://s2-g1.glbimg.com/6decO-W6pm8HCNM5ZubgXSQidMc=/0x0:1500x1500/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/v/v/sIqlXeTTWdgokE2oJEEA/novosbaianoscapa1972.jpg" class="capa-album">
+            </div>
+
+        </div> <button class="seta-btn right" onclick="scrollCanvas('nacional', 300)">&#10095;</button>
+    </div>
+</div>        </section>
 
         <!-- --- CONTATOS --- -->
         <section id="contatos">
@@ -361,19 +380,18 @@
     <footer>
         <div class="footer-content">
             <p>© 2026 Gabriel Oliveira • Crafted with Passion</p>
-                        </div>
+        </div>
 
-            <div class="footer-social">
-                <a href="https://linkedin.com/in/SEU-PERFIL" target="_blank" class="footer-link linkedin"
-                    title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/SEU-GITHUB" target="_blank" class="footer-link github" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#home" class="footer-link world" title="Portfólio">
-                    <i class="fas fa-globe"></i>
-                </a>
+        <div class="footer-social">
+            <a href="https://linkedin.com/in/SEU-PERFIL" target="_blank" class="footer-link linkedin" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/SEU-GITHUB" target="_blank" class="footer-link github" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#home" class="footer-link world" title="Portfólio">
+                <i class="fas fa-globe"></i>
+            </a>
         </div>
     </footer>
     <script src="script.js"></script>

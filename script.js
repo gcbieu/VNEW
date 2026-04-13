@@ -37,3 +37,7 @@ function scrollCanvas(id, distance) {
         behavior: 'smooth'
     });
 }
+function toggleVinil(elemento) {
+    // Adiciona ou remove a classe 'ativo' ao clicar
+    elemento.classList.toggle('ativo');
+}
